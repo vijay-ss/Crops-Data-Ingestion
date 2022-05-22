@@ -6,12 +6,12 @@ ENV AIRFLOW_HOME=/opt/airflow
 USER root
 RUN apt-get update
 
-
-FROM python:3.9
-WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 CMD ["python"]
 
 SHELL ["/bin/bash", "-o", "pipefail", "-e", "-u", "-x", "-c"]
+
+WORKDIR $AIRFLOW_HOME
+USER $AIRFLOW_UID
