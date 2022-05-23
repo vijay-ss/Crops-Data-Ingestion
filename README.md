@@ -28,7 +28,7 @@ The tools used to complete this project are:
 
 ## Architecture
 
-The architecture diagram shows the process in more detail:
+The architecture diagram shows the process overview:
 
 ![](images/crops-architecture.png)
 
