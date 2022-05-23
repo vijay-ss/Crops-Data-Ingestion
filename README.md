@@ -37,7 +37,11 @@ All python files implement the standard logger library for monitoring row counts
 
 ### Data Quality Monitoring
 
-Pandas Profiling module to calculate basig data metrics such as missing values & duplicates in source files. Pandas Profiling integrates with Great Expectations (https://github.com/ydataai/pandas-profiling).
+The Pandas Profiling module was used to calculate basig data metrics such as missing values & duplicates in source files. Pandas Profiling integrates with Great Expectations (https://github.com/ydataai/pandas-profiling).
+
+Of note, the Market Size data set includes 940 duplicate rows at 4.8%. This is rather high and I would report these to the business and source data team.
+
+![](images/market-size-profile.png)
 
 Link to profiling notebook: [https://github.com/user/repo/blob/branch/other_file.md](https://nbviewer.org/github/vijay-ss/Crops-Data-Ingestion/blob/main/data-quality-monitoring/Data_Quality_Monitoring.ipynb)
 
