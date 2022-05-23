@@ -20,7 +20,7 @@ Given that the 3 source file data occur at different levels of granularity, the 
 ## Tools
 
 The tools used to complete this project are:
-- Python (pandas, numpy, profiler etc. see requirements.txt file)
+- Python (pandas, numpy, profiler, logging etc. see requirements.txt file)
 - Docker/Docker-Compose
 - Apache Airflow
 - Unix bash commands
