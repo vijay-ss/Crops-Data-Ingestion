@@ -1,3 +1,4 @@
+import pytest
 import pandas as pd
 
 def update_region(row):
