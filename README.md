@@ -29,6 +29,12 @@ The architecture diagram shows the process in more detail:
 
 Apache Airflow was used to divide the tasks into data ingestion & transformation.
 
+#### Alerts
+
+The DAG has been setup to alert when a task fails, or if a task SLA takes longer exceeds a 10 minute runtime.
+
+
+
 ![](images/DAG.png)
 
 ### Logging
