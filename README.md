@@ -19,6 +19,8 @@ The tools used to complete this project are:
 - Unix bash commands
 - Jupyter Notebook
 
+## Architecture
+
 The architecture diagram shows the process in more detail:
 
 ![](images/crops-architecture.png)
