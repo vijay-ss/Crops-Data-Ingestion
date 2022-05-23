@@ -1,0 +1,10 @@
+2022-05-23 03:56:02,503:INFO:ingestion_usda_files:Current files before download: ['__pycache__', 'ingestion_usda_files.py', 'usda_ingest.log', 'ingestion_dag.py', 'transfrom_data.py', 'transform_data.log', 'dag_runs.log']
+2022-05-23 03:56:02,504:INFO:ingestion_usda_files:Downloading file : 2020_fsa_acres_as_of_010521-BbO60I.zip
+2022-05-23 03:56:10,336:INFO:ingestion_usda_files:Downloading file : 2019_fsa_acres_jan2020_stlno1.zip
+2022-05-23 03:56:14,534:INFO:ingestion_usda_files:Downloading file : 2018_fsa_acres_Jan-2019-kgcr.zip
+2022-05-23 03:56:18,731:INFO:ingestion_usda_files:Current files after download: ['__pycache__', 'ingestion_usda_files.py', 'usda_ingest.log', 'ingestion_dag.py', 'transfrom_data.py', 'transform_data.log', 'dag_runs.log', '2020_fsa_acres_web_010521.xlsx', '2019_fsa_acres_web_010220.xlsx', '2018_fsa_acres_012819.xlsx']
+2022-05-23 15:59:50,102:INFO:ingestion_usda_files:Current files before download: ['__pycache__', 'ingestion_usda_files.py', 'usda_ingest.log', 'ingestion_dag.py', 'transfrom_data.py', 'transform_data.log', 'dag_runs.log']
+2022-05-23 15:59:50,103:INFO:ingestion_usda_files:Downloading file : 2020_fsa_acres_as_of_010521-BbO60I.zip
+2022-05-23 15:59:55,538:INFO:ingestion_usda_files:Downloading file : 2019_fsa_acres_jan2020_stlno1.zip
+2022-05-23 16:00:00,417:INFO:ingestion_usda_files:Downloading file : 2018_fsa_acres_Jan-2019-kgcr.zip
+2022-05-23 16:00:04,699:INFO:ingestion_usda_files:Current files after download: ['__pycache__', 'ingestion_usda_files.py', 'usda_ingest.log', 'ingestion_dag.py', 'transfrom_data.py', 'transform_data.log', 'dag_runs.log', '2020_fsa_acres_web_010521.xlsx', '2019_fsa_acres_web_010220.xlsx', '2018_fsa_acres_012819.xlsx']

@@ -1,0 +1,13 @@
+2022-05-23 03:59:08,793:INFO:transfrom_data:Planted acres df record count: 539127
+2022-05-23 03:59:09,288:INFO:transfrom_data:df_treated_acres_x_products record count: 12
+2022-05-23 03:59:10,204:INFO:transfrom_data:df_planted_acres_agg record count: 12
+2022-05-23 16:03:01,269:INFO:transfrom_data:Planted acres df record count: 539127
+2022-05-23 16:03:01,381:INFO:transfrom_data:df_products_agg record count: 60
+2022-05-23 16:03:01,393:INFO:transfrom_data:df_products_agg_pv record count: 60
+2022-05-23 16:03:01,795:INFO:transfrom_data:df_treated_acres_raw_pv record count: 53759
+2022-05-23 16:03:02,081:INFO:transfrom_data:df_treated_acres_agg record count: 12
+2022-05-23 16:03:02,090:INFO:transfrom_data:df_treated_acres_x_products record count: 12
+2022-05-23 16:03:03,004:INFO:transfrom_data:df_planted_acres_x_region record count: 539127
+2022-05-23 16:03:03,102:INFO:transfrom_data:df_planted_acres_agg record count: 12
+2022-05-23 16:03:03,110:INFO:transfrom_data:df_final record count: 12
+2022-05-23 16:03:03,135:INFO:transfrom_data:df_final written out to xlsx file.
