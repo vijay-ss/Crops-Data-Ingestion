@@ -25,19 +25,21 @@ The architecture diagram shows the process in more detail:
 
 ## Process Flows
 
-### ask Execution & Scheduling
+### Task Execution & Scheduling
 
 Apache Airflow was used to divide the tasks into data ingestion & transformation.
 
 ![](images/DAG.png)
 
-###Logging
+### Logging
 
 All python files implement the standard logger library for monitoring row counts and errors. Output log files are also generated.
 
-###Data Quality Monitoring
+### Data Quality Monitoring
 
-Pandas Profiling module to calculate basig data metrics such as missing values & duplicates in source files. Pandas Prifiling integrates with Great Expectations (https://github.com/ydataai/pandas-profiling).
+Pandas Profiling module to calculate basig data metrics such as missing values & duplicates in source files. Pandas Profiling integrates with Great Expectations (https://github.com/ydataai/pandas-profiling).
+
+Link to profiling notebook: [a link]([https://github.com/user/repo/blob/branch/other_file.md](https://nbviewer.org/github/vijay-ss/Crops-Data-Ingestion/blob/main/data-quality-monitoring/Data_Quality_Monitoring.ipynb))
 
 ### Unit Testing
 
