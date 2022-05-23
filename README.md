@@ -35,7 +35,7 @@ Apache Airflow was used to divide the tasks into data ingestion & transformation
 
 The DAG has been setup to alert when a task fails, or if a task SLA takes longer exceeds a 10 minute runtime.
 
-![](airflow-alert/DAG.png)
+![](images/airflow-alert.png)
 
 ### Logging
 
