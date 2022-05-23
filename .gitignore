@@ -1,0 +1,15 @@
+dags/2018_fsa_acres_012819.xlsx
+dags/2019_fsa_acres_web_010220.xlsx
+dags/2020_fsa_acres_web_010521.xlsx
+Treated Acres.csv
+Market Size.xlsx
+Data Engineer_Exercise.docx.pdf
+
+logs/dag_processor_manager
+logs/scheduler
+logs/treated_acres_dag
+logs/usda_crops_dag
+
+dags/__pycache__
+
+scripts.md
