@@ -85,6 +85,9 @@ def transform_callable():
     df_planted_acres_2019["Crop_Year"] = int("2019")
     df_planted_acres_2020["Crop_Year"] = int("2020")
 
+    logging.info('df_planted_acres_2018 record count: {}'.format(len(df_planted_acres_2018)))
+    logging.info('df_planted_acres_2019 record count: {}'.format(len(df_planted_acres_2019)))
+    logging.info('df_planted_acres_2020 record count: {}'.format(len(df_planted_acres_2020)))
 
     # Import usda state codes reference file
     df_ref_state_codes = pd.read_html(url_state_codes, match="State")[0]
@@ -141,11 +144,15 @@ def transform_callable():
         .agg({"Market_Share": "sum",
         "Total_Dollars": "sum"}).reset_index()
 
+    logger.info("df_products_agg record count: {}".format(len(df_products_agg)))
+
     # pivot product category to column
     df_products_agg_pv = df_products_agg.pivot(index=df_products_agg.columns.drop(["Product_Category_Name", "Market_Share"]), \
                             columns="Product_Category_Name", \
                             values="Market_Share").rename_axis(columns=None).reset_index()
     df_products_agg_pv.columns = df_products_agg_pv.columns.str.replace(' ','_')
+
+    logger.info("df_products_agg_pv record count: {}".format(len(df_products_agg_pv)))
 
     # aggregate on the new product category columns
     df_products_agg_2 = df_products_agg_pv.groupby(["Budget_Year", "EZT_Region_Key", "Region_Name"]) \
@@ -169,6 +176,8 @@ def transform_callable():
                             values="Total_Sum_Product_Amt_Used_In_LB_or_GL") \
     .rename(columns={"GL": "Total_Sum_Product_Amt_Used_In_GL", "LB": "Total_Sum_Product_Amt_Used_In_LB"}) \
     .reset_index().rename_axis(None, axis=1)
+
+    logger.info("df_treated_acres_raw_pv record count: {}".format(len(df_treated_acres_raw_pv)))
 
     df_treated_acres_raw_pv["Total_Sum_Product_Amt_Used_In_GL"] = df_treated_acres_raw_pv["Total_Sum_Product_Amt_Used_In_GL"].replace(np.nan, 0)
     df_treated_acres_raw_pv["Total_Sum_Product_Amt_Used_In_LB"] = df_treated_acres_raw_pv["Total_Sum_Product_Amt_Used_In_LB"].replace(np.nan, 0)
@@ -203,6 +212,8 @@ def transform_callable():
             "Ag_Nematicide_Product_Cnt": "sum",
             "Total_Sum_Product_Amt_Used_In_GL": "sum",
             "Total_Sum_Product_Amt_Used_In_LB": "sum"}).reset_index()
+
+    logger.info("df_treated_acres_agg record count: {}".format(len(df_treated_acres_agg)))
 
 
     ## Merge Treated Acres and Product Dataframes ##
@@ -256,6 +267,8 @@ def transform_callable():
         how="left",
         on=['State_Code']).rename(columns={"State_x": "State"})
 
+    logger.info("df_planted_acres_x_region record count: {}".format(len(df_planted_acres_x_region)))
+
     # aggregate planted acres dataframe
     df_planted_acres_agg = df_planted_acres_x_region.groupby(['Crop_Year', 'EZT_Region_Key', 'Region_Name']) \
         .agg({'Planted_Acres': 'sum',
@@ -279,4 +292,8 @@ def transform_callable():
                 .rename(columns={"Region_Name_x": "Region_Name"}) \
                     .drop_duplicates().reset_index(drop=True)
 
+    logger.info("df_final record count: {}".format(len(df_final)))
+
     df_final.to_excel("Final_Output_Summarized.xlsx", index=False)
+
+    logger.info("df_final written out to xlsx file.")
