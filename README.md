@@ -3,6 +3,7 @@
 ## Objective
 
 The main objective of this project is to produce an output excel file based on 3 crop-related input files:
+
 - Crop Protection Market Size (Market Size.xlsx)
 - Crop Protection Treated Acres (Treated Acres.csv)
 - USDA Planted Acres (an excel file extracted from zip)
@@ -18,4 +19,26 @@ The tools used to complete this project are:
 - Unix bash commands
 - Jupyter Notebook
 
+The architecture diagram shows the process in more detail:
+
 ![](images/crops-architecture.png)
+
+## Process Flows
+
+### ask Execution & Scheduling
+
+Apache Airflow was used to divide the tasks into data ingestion & transformation.
+
+![](images/DAG.png)
+
+###Logging
+
+All python files implement the standard logger library for monitoring row counts and errors. Output log files are also generated.
+
+###Data Quality Monitoring
+
+Pandas Profiling module to calculate basig data metrics such as missing values & duplicates in source files. Pandas Prifiling integrates with Great Expectations (https://github.com/ydataai/pandas-profiling).
+
+### Unit Testing
+
+Functions have been tested using the pytest module.
