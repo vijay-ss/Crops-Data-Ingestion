@@ -1,5 +1,12 @@
 # Crops-Data-Ingestion
 
+***to run this project locally:***
+
+Clone the repository and run:
+- docker-compose build
+- docker-compose up airflow-init
+- docker-compose up
+
 ## Objective
 
 The main objective of this project is to produce an output excel file based on 3 crop-related input files:
