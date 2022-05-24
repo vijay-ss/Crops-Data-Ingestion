@@ -21,8 +21,8 @@ logger.addHandler((file_handler))
 
 
 def update_region(row):
-# update null region based on usda website
-# https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/docs/regions/
+    """update null regions based on state code"""
+    # https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/docs/regions/
     
     if row['State_Code'] == 2:
         row['EZT_Region_Key'] = 60
@@ -60,7 +60,7 @@ def update_region(row):
 
 # TODO: split this function into separate DAGs
 def transform_callable():
-    """wrapper function to be called by airflow"""
+    """Wrapper function to be called by Airflow"""
 
     ## Import Source Data Files ##
 
@@ -111,7 +111,7 @@ def transform_callable():
                     df_planted_acres_2020]
 
     def clean_data(*args):
-        """De-dup source dataframes"""
+        """De-dup source dataframes inplace"""
         for args in raw_tables:
             logger.debug("Row count before: {}".format(len(args)))
             args.drop_duplicates(inplace=True)
