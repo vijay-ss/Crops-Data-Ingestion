@@ -15,7 +15,11 @@ The main objective of this project is to produce an output excel file based on 3
 - Crop Protection Treated Acres (Treated Acres.csv)
 - USDA Planted Acres (an excel file extracted from zip: [link to USDA website](https://www.fsa.usda.gov/news-room/efoia/electronic-reading-room/frequently-requested-information/crop-acreage-data/index)
 
-Given that the 3 source file data occur at different levels of granularity, the data will be aggregated and summarized at the Year and Region level before loading to the output file. This data can be used by BI teams for reporting on key metrics to the business.
+### Final Data Set
+
+Given that the 3 source file data occur at different levels of granularity, the data is aggregated and summarized at the Year and Region level before loading to the output file. Data from both sources has been pivoted into new columns, making it a wide-table. This allows for joins to occur between all 3 data sets on a common level of granularity.
+
+This data can be used by BI teams for reporting on key metrics to the business.
 
 ## Tools
 
