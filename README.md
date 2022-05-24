@@ -60,9 +60,17 @@ The Pandas Profiling module was used to calculate basic data metrics such as mis
 
 Link to profiling notebook: (https://nbviewer.org/github/vijay-ss/Crops-Data-Ingestion/blob/main/data-quality-monitoring/Data_Quality_Monitoring.ipynb)
 
-Of note, the **Market Size** data set includes 940 duplicate rows at 4.8%. This is rather high and I would report these to the business and source data team.
+### Market Size PData Quality Check
+
+Of note, the **Market Size** data set includes 940 duplicate rows at 4.8%. This is rather high and I would report these to the business and source data team. See below:
 
 ![](images/market-size-profile.png)
+
+### Planted Acres Data Quality Check
+
+Similarly, the **Planted Acres** data set has 0.7% duplicate rows and also 1.4% missing cells. These missing cells are localized to the crop_type column which is not used to build the final data set. See below:
+
+![](images/planted-acres-profile.png)
 
 ### Unit Testing
 
