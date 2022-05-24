@@ -56,7 +56,7 @@ The Pandas Profiling module was used to calculate basig data metrics such as mis
 
 Link to profiling notebook: (https://nbviewer.org/github/vijay-ss/Crops-Data-Ingestion/blob/main/data-quality-monitoring/Data_Quality_Monitoring.ipynb)
 
-Of note, the Market Size data set includes 940 duplicate rows at 4.8%. This is rather high and I would report these to the business and source data team.
+Of note, the ***Market Size*** data set includes 940 duplicate rows at 4.8%. This is rather high and I would report these to the business and source data team.
 
 ![](images/market-size-profile.png)
 
