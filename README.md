@@ -67,5 +67,6 @@ Functions have been tested using the pytest module.
 ### Next Steps
 
 - Refactor and further simplify the code
+- Create separate folders for DAGs, log files and python scripts
 - Split transform DAG into multiple steps
 - Upload final output into a SQL database
