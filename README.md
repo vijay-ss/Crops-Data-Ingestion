@@ -52,7 +52,7 @@ All python files implement the standard logger library for monitoring row counts
 
 ### Data Quality Monitoring
 
-The Pandas Profiling module was used to calculate basig data metrics such as missing values & duplicates in source files. Pandas Profiling integrates with Great Expectations (https://github.com/ydataai/pandas-profiling).
+The Pandas Profiling module was used to calculate basic data metrics such as missing values & duplicates in source files. Pandas Profiling integrates with Great Expectations (https://github.com/ydataai/pandas-profiling).
 
 Link to profiling notebook: (https://nbviewer.org/github/vijay-ss/Crops-Data-Ingestion/blob/main/data-quality-monitoring/Data_Quality_Monitoring.ipynb)
 
