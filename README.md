@@ -63,3 +63,9 @@ Of note, the **Market Size** data set includes 940 duplicate rows at 4.8%. This 
 ### Unit Testing
 
 Functions have been tested using the pytest module.
+
+### Next Steps
+
+- Refactor and further simplify the code
+- Split transform DAG into multiple steps
+- Upload final output into a SQL database
