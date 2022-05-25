@@ -72,9 +72,9 @@ Similarly, the **Planted Acres** data set has 0.7% duplicate rows and also 1.4% 
 
 ![](images/planted-acres-profile.png)
 
-### Unit Testing
+### Testing
 
-Functions have been tested using the pytest module.
+Functions have been tested using the pytest module. End-to-end testing has been completed to ensure pipeline executes without errors.
 
 ### Next Steps
 
