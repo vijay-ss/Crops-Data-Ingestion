@@ -252,17 +252,17 @@ def transform_callable():
             .reset_index(drop=True)
 
     # map each region to state code
-    df_state_region_xref = pd.merge(df_ref_state_codes, df_ref_region, how='left', on=['State_Code']) \
-        .drop_duplicates() \
-            .rename(columns={"State_x": "State", "State_Nm_x": "State_Nm"}) \
-                .reset_index(drop=True)
+    # df_state_region_xref = pd.merge(df_ref_state_codes, df_ref_region, how='left', on=['State_Code']) \
+    #     .drop_duplicates() \
+    #         .rename(columns={"State_x": "State", "State_Nm_x": "State_Nm"}) \
+    #             .reset_index(drop=True)
 
-    df_state_region_xref = df_state_region_xref[['State_Code', 'State', 'State_Nm', 'EZT_Region_Key', 'Region_Name']]
+    # df_state_region_xref = df_state_region_xref[['State_Code', 'State', 'State_Nm', 'EZT_Region_Key', 'Region_Name']]
 
 
-    df_state_region_xref.apply(update_region, axis=1)
+    # df_state_region_xref.apply(update_region, axis=1)
 
-    # join region to planted acres dataframe
+    # join ref region to planted acres dataframe
     df_planted_acres_x_region = pd.merge(df_planted_acres_all, df_ref_region,
         how="left",
         on=['State_Code']).rename(columns={"State_x": "State"})
