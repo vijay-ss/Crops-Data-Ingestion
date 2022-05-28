@@ -1,4 +1,4 @@
-# Crops-Data-Ingestion
+# Crops-Data-Pipeline
 
 ***to run this project locally:***
 
